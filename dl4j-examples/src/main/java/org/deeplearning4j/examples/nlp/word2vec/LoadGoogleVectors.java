@@ -4,7 +4,7 @@ import org.deeplearning4j.util.SerializationUtils;
 // import org.deeplearning4j.word2vec.Word2Vec;
 // import org.deeplearning4j.word2vec.loader.Word2VecLoader;
 
-import org.deeplearning4j.models.embeddings.loader.Word2VecLoader;
+import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
 
 
@@ -16,7 +16,8 @@ import java.io.File;
 public class LoadGoogleVectors {
 
     public static void main(String[] args) throws Exception {
-        Word2Vec vec = Word2VecLoader.loadGoogleModel("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
+        // Word2Vec vec = Word2VecLoader.loadGoogleModel("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
+        Word2Vec vec = Word2VecLoader.loadFullModel("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
         SerializationUtils.saveObject(vec,new File("/similarity/resultGoogle"));
 
         // Word2Vec vec = SerializationUtils.readObject(new File("mypath"));
