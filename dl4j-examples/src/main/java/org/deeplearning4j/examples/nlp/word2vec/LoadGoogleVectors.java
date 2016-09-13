@@ -9,7 +9,7 @@ import java.io.File;
 /**
  * Created by agibsonccc on 5/25/14.
  */
-public class LoadGoogleVectors1 {
+public class LoadGoogleVectors {
 
     public static void main(String[] args) throws Exception {
         Word2Vec vec = Word2VecLoader.loadGoogleModel("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
