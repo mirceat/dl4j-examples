@@ -22,10 +22,10 @@ public class LoadGoogleVectors {
 
         // Word2Vec vec = SerializationUtils.readObject(new File("mypath"));
 
-        float[] wordVector = vec.getWordVector("company");
+        double[] wordVector = vec.getWordVector("company");
         
-        for ( float f :wordVector ) {
-            Sysyem.out.println( f );
+        for ( double d :wordVector ) {
+            System.out.println( d );
         }
     }
 }
