@@ -1,8 +1,12 @@
 package org.deeplearning4j.examples.nlp.word2vec;
 
 import org.deeplearning4j.util.SerializationUtils;
-import org.deeplearning4j.word2vec.Word2Vec;
-import org.deeplearning4j.word2vec.loader.Word2VecLoader;
+// import org.deeplearning4j.word2vec.Word2Vec;
+// import org.deeplearning4j.word2vec.loader.Word2VecLoader;
+
+import org.deeplearning4j.models.embeddings.loader.Word2VecLoader;
+import org.deeplearning4j.models.word2vec.Word2Vec;
+
 
 import java.io.File;
 
