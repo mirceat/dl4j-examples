@@ -12,12 +12,15 @@ import java.io.File;
 public class LoadGoogleVectors1 {
 
     public static void main(String[] args) throws Exception {
-        Word2Vec vec = Word2VecLoader.loadGoogleModel(args[0]);
-        SerializationUtils.saveObject(vec,new File(args[1]));
+        Word2Vec vec = Word2VecLoader.loadGoogleModel("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
+        SerializationUtils.saveObject(vec,new File("/similarity/resultGoogle"));
 
         // Word2Vec vec = SerializationUtils.readObject(new File("mypath"));
 
         float[] wordVector = vec.getWordVector("company");
-
+        
+        for ( float f :wordVector ) {
+            Sysyem.out.println( f );
+        }
     }
 }
