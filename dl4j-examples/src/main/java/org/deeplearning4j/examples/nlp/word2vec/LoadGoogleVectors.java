@@ -17,7 +17,7 @@ public class LoadGoogleVectors {
 
     public static void main(String[] args) throws Exception {
         // Word2Vec vec = Word2VecLoader.loadGoogleModel("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
-        Word2Vec vec = Word2VecLoader.loadFullModel("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
+        Word2Vec vec = WordVectorSerializer.loadFullModel("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
         SerializationUtils.saveObject(vec,new File("/similarity/resultGoogle"));
 
         // Word2Vec vec = SerializationUtils.readObject(new File("mypath"));
