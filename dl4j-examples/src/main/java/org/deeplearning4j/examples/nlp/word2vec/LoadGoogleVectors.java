@@ -7,6 +7,7 @@ import org.deeplearning4j.util.SerializationUtils;
 
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
+import org.deeplearning4j.models.embeddings.wordvectors.WordVectors;
 
 
 import java.io.File;
@@ -23,7 +24,8 @@ public class LoadGoogleVectors {
 
         // Word2Vec vec = SerializationUtils.readObject(new File("mypath"));
         File gModel = new File("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
-        Word2Vec vec = WordVectorSerializer.loadGoogleModel(gModel, true);
+        // Word2Vec vec = WordVectorSerializer.loadGoogleModel(gModel, true);
+        WordVectors vec = WordVectorSerializer.loadGoogleModel(gModel, true);
     
         double[] wordVector = vec.getWordVector("company");
         
