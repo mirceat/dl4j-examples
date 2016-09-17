@@ -34,7 +34,7 @@ public class LoadGoogleVectors {
 		    // get vector
             double[] wordVector = vec.getWordVector( line );
         
-            if ( wordVector.length > 0 ) {
+            if ( wordVector != null ) {
                 System.out.print( line );
                 for ( double d : wordVector ) {
                     System.out.print( "\t" + d );
