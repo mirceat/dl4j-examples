@@ -23,7 +23,7 @@ public class LoadGoogleVectors {
     public static void main(String[] args) throws Exception {
         // read model
         File gModel = new File("/shared/GoogleNews-vectors-negative300.bin.gz");
-        # File gModel = new File("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
+        // File gModel = new File("/similarity/models/GoogleNews-vectors-negative300.bin.gz");
         WordVectors vec = WordVectorSerializer.loadGoogleModel(gModel, true);
         
         // read words one per line     
